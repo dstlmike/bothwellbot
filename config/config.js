@@ -5,13 +5,17 @@ exports.bot_owner = {
   id:   process.env.BOT_OWNER_ID,
   access_token: process.env.BOT_ACCESS_TOKEN
 };
+exports.bot
 
 var botName = process.env.BOT_NAME;
-/*
-if (botName == 'asylum') {
-  exports.bot_name = 'Reddit Asylum Bot';
+
+if (botName == 'BothwellBot') {
+  exports.bot_name = 'BothwellBot';
   exports.bots = {
-    ra  : process.env.RA_BOT_ID,
+    BothwellBot : process.env.BOT_ID
+    }
+}
+/*
     raw : process.env.RAW_BOT_ID,
     ral : process.env.RAL_BOT_ID,
     fo0 : process.env.FO0_BOT_ID,
