@@ -10,7 +10,7 @@ var botName = "BothwellBot";
 exports.botName = process.env.BOT_NAME;
 
 exports.bots = {
-  BothwellBot: process.env.BOT_NAME
+  BothwellBot: process.env.BOT_ID
   };
   
 /*
