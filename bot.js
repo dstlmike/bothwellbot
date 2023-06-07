@@ -28,7 +28,7 @@ exports.respond = function(botRoom) {
     isMod:        mods.isMod(request.user_id),
     bots:         config.bots,
     funMode:      sysCommands.fun_mode(),
-    owner:        config.bot_owner
+    owner:        config.bot_owner.id
   };
 
   this.res.writeHead(200);
