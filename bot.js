@@ -65,9 +65,9 @@ function getBot(path) {
   var bot = {};
   path = path.toLowerCase();
 
-  if (config.bots[path]) {
+  if (config.bots.BothwellBot) {
     bot.type = path;
-    bot.id = config.bots[path];
+    bot.id = config.bots.BothwellBot;
   }
 
   return bot;
