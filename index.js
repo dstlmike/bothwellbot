@@ -30,10 +30,10 @@ server = http.createServer(function (req, res) {
   });
 });
 
-port = Number( process.env.PORT || 8080 || 3002);
+port = "8080" || "27017"; //Number( process.env.PORT || 8080 || 3002);
 ip = process.env.IP || "127.0.0.1"; //process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
-server.listen(ip); //port, ip);
+server.listen(port, ip);
 
 function ping() {
   console.log(this.res);
