@@ -24,7 +24,7 @@ exports.respond = function(botRoom) {
 
   var dataHash = {
     request:      request,
-    currentBot:   getBot(botRoom),
+    currentBot: getBot(path),
     isMod:        mods.isMod(request.user_id),
     bots:         config.bots,
     funMode:      sysCommands.fun_mode(),
@@ -61,7 +61,8 @@ exports.commands = function() {
   this.res.end(output);
 }
 
-exports.getBot = function(path) {
+exports.getBot = getBot(path);
+/*
   var bot = {};
   path = path.toLowerCase();
 
@@ -71,6 +72,24 @@ exports.getBot = function(path) {
   }
 
   return bot;
+}
+*/
+ function getBot(path) {
+
+  var bot = {};
+
+  path = path.toLowerCase();
+
+  if (bots[path]) {
+
+    bot.type = path;
+
+    bot.id = process.env.BOT_OWNER_ID;
+
+  }
+
+  return bot;
+
 }
 
 function sendDelayedMessage(msg, attachments, botID) {
