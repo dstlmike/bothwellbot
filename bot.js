@@ -24,7 +24,7 @@ exports.respond = function(botRoom) {
 
   var dataHash = {
     request:      request,
-    currentBot: getBot(path),
+    currentBot: getBot(botRoom),
     isMod:        mods.isMod(request.user_id),
     bots:         config.bots,
     funMode:      sysCommands.fun_mode(),
