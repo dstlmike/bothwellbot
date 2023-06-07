@@ -6,7 +6,7 @@ exports.bot_owner = {
   access_token: process.env.BOT_ACCESS_TOKEN
 };
 
-//exports.bot
+var botName = process.env.BOT_NAME;
 
 exports.botName = process.env.BOT_NAME;
 
