@@ -7,7 +7,7 @@ exports.bot_owner = {
 };
 
 var botName = process.env.BOT_NAME;
-
+/*
 if (botName == 'asylum') {
   exports.bot_name = 'Reddit Asylum Bot';
   exports.bots = {
@@ -40,5 +40,5 @@ if (botName == 'asylum') {
     clpub : process.env.CLPUB_BOT_ID
   }
 }
-
+*/
 exports.delay_time = 1000;
