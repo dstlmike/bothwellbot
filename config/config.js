@@ -8,12 +8,12 @@ exports.bot_owner = {
 
 //exports.bot
 
-var botName = process.env.BOT_NAME;
+exports.botName = process.env.BOT_NAME;
 
 if (botName == 'BothwellBot') {
   exports.bot_name = 'BothwellBot';
   exports.bots = {
-    BothwellBot : process.env.BOT_ID
+    botID : process.env.BOT_ID
     }
 }
 /*
