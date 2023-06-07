@@ -30,8 +30,8 @@ server = http.createServer(function (req, res) {
   });
 });
 
-port = "8080" || "27017"; //Number( process.env.PORT || 8080 || 3002);
-ip = process.env.IP || "127.0.0.1"; //process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+port = Number( process.env.PORT || 27017 || 8080 || 3002);
+ip = process.env.IP || "0.0.0.0" || "127.0.0.1"; //process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
 server.listen(ip);
 
