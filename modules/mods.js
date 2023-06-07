@@ -70,11 +70,11 @@ function addModCmd(request, dataHash, callback) {
   var regex = /^\/mod add (.+?) ([\s\S]+)/i;
 
   if (regex.test(request.text)) {
-    if (request.user_id !=  "10241176") {
+   /* if (request.user_id !=  "10241176") {
       callback(true, "You wish you could add mods", []);
       return "You wish you could add mods.";
     }
-
+*/
     if (!request.attachments[0].user_ids){
       callback(true, "You have to mention the user you want to mod using @");
       return "You have to mention the user you want to mod user @";
