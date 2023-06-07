@@ -1,7 +1,7 @@
 {
-  "name": "groupme-bot",
-  "version": "0.0.1",
-  "description": "A bot made for groupme",
+  "name": "Bothwell-Bot",
+  "version": "1.0.0",
+  "description": "A Bot made for Bothwell-Accurate",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -16,11 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jmatty1983/reddit-asylum"
+    "url": ""
   },
   "keywords": [
-    "node",
-    "groupme"
+    ""
   ],
   "license": "MIT"
 }
