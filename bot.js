@@ -3,7 +3,7 @@ var sysCommands  = require('./modules/sys-commands.js');
 var db           = require('./modules/db.js');
 var mods         = require('./modules/mods.js');
 var commandList  = require('./modules/command-list.js');
-
+var owner = process.env.BOT_OWNER_ID;
 //commands with custom actions
 var userCmds     = require('./custom_commands/user-commands.js');
 var userMentions = require('./custom_commands/user-mentions.js');
@@ -28,7 +28,7 @@ exports.respond = function(botRoom) {
     isMod:        mods.isMod(request.user_id),
     bots:         config.bots,
     funMode:      sysCommands.fun_mode(),
-    owner:        config.bot_owner.id
+    owner:        owner
   };
 
   this.res.writeHead(200);
@@ -61,13 +61,13 @@ exports.commands = function() {
   this.res.end(output);
 }
 
-function getBot(path) {
+exports.getBot = function(path) {
   var bot = {};
   path = path.toLowerCase();
 
-  if (config.bots.BothwellBot) {
+  if (bots[path]) {
     bot.type = path;
-    bot.id = config.bots.BothwellBot;
+    bot.id = process.env.BOT_OWNER_ID;
   }
 
   return bot;
