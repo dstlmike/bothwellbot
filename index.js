@@ -36,7 +36,7 @@ ip = process.env.IP || "127.0.0.1"; //process.env.OPENSHIFT_NODEJS_IP || "127.0.
 server.listen(ip);
 
 function ping() {
-  console.log(this.res);
+//  console.log(this.res);
   this.res.writeHead(200);
   this.res.end("I am a robot.");
 }
