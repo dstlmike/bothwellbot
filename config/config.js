@@ -6,14 +6,18 @@ exports.bot_owner = {
   access_token: process.env.BOT_ACCESS_TOKEN
 };
 
-var botName = process.env.BOT_NAME;
-
+var botName = "BothwellBot";
 exports.botName = process.env.BOT_NAME;
 
+exports.bots = {
+  BothwellBot: process.env.BOT_NAME
+  }
+  
+/*
 if (botName == 'BothwellBot') {
   exports.bot_name = 'BothwellBot';
   exports.bots = {
-    botID : process.env.BOT_ID
+    BothwellBot : process.env.BOT_ID
     }
 }
 /*
