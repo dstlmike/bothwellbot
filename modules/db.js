@@ -2,13 +2,14 @@ var db_config   = require('../config/db-config.js');
 var mongoDB     = require('mongodb').MongoClient;
 //
 var connection_string = 'mongodb+srv://bothwellbot:bothwellbot@cluster0.esmha.mongodb.net/bothwellbot?retryWrites=true&w=majority';
-if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
+/*if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   connection_string = 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
   process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
   process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
   process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
   process.env.OPENSHIFT_APP_NAME;
 }
+*/
 
 function connect(callback){
   mongoDB.connect(connection_string, function(err, db) {
