@@ -31,7 +31,7 @@ server = http.createServer(function (req, res) {
 });
 
 port = Number(process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080 || 3002);
-ip = process.env.IP; || "127.0.0.1"; //process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+ip = process.env.IP || "127.0.0.1"; //process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
 server.listen(port, ip);
 
