@@ -66,11 +66,11 @@ function getModNames(){
   return names;
 }
 
-function addModCmd(request, owner, callback) {
+function addModCmd(request, dataHash, callback) {
   var regex = /^\/mod add (.+?) ([\s\S]+)/i;
 
   if (regex.test(request.text)) {
-    if (request.user_id != owner.id) {
+    if (request.user_id !=  dataHash.owner) {
       callback(true, "You wish you could add mods", []);
       return "You wish you could add mods.";
     }
