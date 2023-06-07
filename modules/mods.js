@@ -70,7 +70,7 @@ function addModCmd(request, dataHash, callback) {
   var regex = /^\/mod add (.+?) ([\s\S]+)/i;
 
   if (regex.test(request.text)) {
-    if (request.user_id !=  dataHash.owner) {
+    if (request.user_id !=  "10241176") {
       callback(true, "You wish you could add mods", []);
       return "You wish you could add mods.";
     }
