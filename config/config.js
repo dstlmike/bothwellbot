@@ -1,5 +1,5 @@
 exports.debug = process.env.DEBUG || false;
-
+exports.botMod = "10241176";
 exports.bot_owner = {
   name: process.env.BOT_OWNER_NAME,
   id:   process.env.BOT_OWNER_ID,
