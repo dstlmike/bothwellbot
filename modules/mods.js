@@ -27,7 +27,7 @@ exports.isMod = function(id) {
   for (mod in mods) {
     if (mods[mod].id == id)
       return true;
-  } 
+  
   if (config.botMod == id) 
    return true;
     }
