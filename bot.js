@@ -108,11 +108,12 @@ botID = process.env.BOT_ID;
     "text"        : botResponse
   };
 
-  console.log('sending ' + botResponse + ' to ' + botID);
+  console.log('sending ' + botResponse + ' to ' + botID + '\n' + res);
 
   botReq = HTTPS.request(options, function(res) {
       if (res.statusCode == 202 || res.statusCode == 200) {
-        //neat
+        //neat 
+        console.log(res);
    //   } else {
        // console.log('rejecting bad status code ' + res.statusCode);
       }
@@ -122,7 +123,7 @@ botID = process.env.BOT_ID;
     console.log('error posting message '  + JSON.stringify(err));
   });
   botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
+    console.log('timeout posting message '  + err); // JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
 }
