@@ -108,7 +108,7 @@ botID = process.env.BOT_ID;
     "text"        : botResponse
   };
 
-  console.log('sending ' + botResponse + ' to ' + botID + '\n' + res);
+  console.log('sending ' + botResponse + ' to ' + botID); // + '\n' + res);
 
   botReq = HTTPS.request(options, function(res) {
       if (res.statusCode == 202 || res.statusCode == 200) {
