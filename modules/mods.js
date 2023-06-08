@@ -131,7 +131,7 @@ mods.push({
     });
     var msg = 'Config Bot ID is set.\n\nYou will be recognized as the bot owner as well as a moderator.\n\nYou can add the bot to additional rooms.\n-First create the bot at dev.groupme.com, like you did the Config bot.\n-Change the end of the callback url form config to something different with no spaces.\n-This new end of the callback url needs to be the same as the name you pick for the add room command in the next step and should be unique to your other bots. It does not need to be the same name you chose for the name of the bot at dev.groupme.com, it just needs to be something you will recognize should you need to make changes.\n-Last use the /room add command as follows:\n/room add <name matching the end of the callback url> <Bot ID>\nEX: /room add foo dV82tx6bA6cstUZX7ghY7aho3y\n\nThere is a list of commands available by typing /commands.';
 
-   callback(true, msg, []);
+ //  callback(true, msg, []);
 
     return msg;
 
