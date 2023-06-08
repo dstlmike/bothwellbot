@@ -61,7 +61,7 @@ exports.commands = function() {
   this.res.end(output);
 }
 
-exports.getBot = getBot();
+//exports.getBot = function getBot(path);
 /*
   var bot = {};
   path = path.toLowerCase();
@@ -74,22 +74,17 @@ exports.getBot = getBot();
   return bot;
 }
 */
+
  function getBot(path) {
-
   var bot = {};
-
   path = path.toLowerCase();
 
-  if (bots[path]) {
-
+  if (config.bots[path]) {
     bot.type = path;
-
-    bot.id = process.env.BOT_OWNER_ID;
-
+    bot.id = config.bots[path];
   }
 
   return bot;
-
 }
 
 function sendDelayedMessage(msg, attachments, botID) {
