@@ -1,4 +1,5 @@
 var mods = [];
+var config = require('../config/config.js');
 var db = require('./db.js');
 var modCommands = [addModCmd, cmdConfig, listModsCmd];
 var owner = process.env.BOT_OWNER_ID;
@@ -26,7 +27,9 @@ exports.isMod = function(id) {
   for (mod in mods) {
     if (mods[mod].id == id)
       return true;
-  }
+  } else if (config.botMod == id) {
+   return true;
+    }
 
   return false;
 }
