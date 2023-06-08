@@ -113,7 +113,7 @@ botID = process.env.BOT_ID;
   botReq = HTTPS.request(options, function(res) {
       if (res.statusCode == 202 || res.statusCode == 200) {
         //neat 
-        console.log(res);
+        console.log(res.body);
    //   } else {
        // console.log('rejecting bad status code ' + res.statusCode);
       }
