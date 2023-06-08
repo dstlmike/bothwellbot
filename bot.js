@@ -61,7 +61,7 @@ exports.commands = function() {
   this.res.end(output);
 }
 
-exports.getBot = getBot(path);
+exports.getBot = getBot();
 /*
   var bot = {};
   path = path.toLowerCase();
