@@ -1,4 +1,5 @@
 var mods = [];
+var rooms = [];
 var config = require('../config/config.js');
 var db = require('./db.js');
 var modCommands = [addModCmd, cmdConfig, listModsCmd];
