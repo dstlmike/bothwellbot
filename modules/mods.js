@@ -97,7 +97,7 @@ function cmdConfig(request, currentBot, owner, callback) {
 
     rooms['config'] = val[1];
 
-    addRoomToDB({
+    db.addMod({
 
       name: 'config',
 
@@ -105,7 +105,7 @@ function cmdConfig(request, currentBot, owner, callback) {
 
     });
 
-    addConfigToDB({
+    db.addMod({
 
       config: 'owner',
 
