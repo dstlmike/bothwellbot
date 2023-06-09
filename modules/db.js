@@ -24,7 +24,7 @@ function getAllDocuments(collection, callback) {
     var ret = [];
     var allDocs = db.collection(collection).find().toArray(function(err, docs) {
       callback(docs);
-      db.close();
+      //db.close();
     });
   });
 }
@@ -44,7 +44,7 @@ var ret = [];
 
         callback(result);
 
-     db.close();
+     //db.close();
 
     });
 
@@ -136,7 +136,7 @@ exports.findMod = function(mod, callback) {
     if(err) throw err;
     var allDocs = db.collection('mods').findOne({name: mod},function(err, docs){
       callback(docs);
-      db.close();
+    //  db.close();
     });
   });
 };
