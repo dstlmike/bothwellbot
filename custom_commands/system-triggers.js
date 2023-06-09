@@ -43,19 +43,19 @@ exports.getCmdListDescription = function () {
   return null;
 }
 
-function addCommandCmd(request, bots, callback) { //isMod, callback) {
+function addCommandCmd(request, bots, isMod, callback) {
   var regex = /^\/addsystrigger (.+?) ([\s\S]+)/i;
   var reqText = request.text;
 
   if (regex.test(reqText)){
     var val = regex.exec(reqText);
-/*
+
     if (!isMod) {
       var msg = "You don't have permission to add commands"
       callback(true, msg, []);
       return msg;
     }
-*/
+
     for (trigger in triggers) {
       if (triggers[trigger].name == val[1]) {
         var msg = val[1] + " already exists";
