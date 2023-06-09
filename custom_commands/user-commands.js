@@ -6,7 +6,7 @@ var db = require('../modules/db.js');
 var db_table = 'user_triggers';
 
 //init - make an init function
-main().catch(console.error);
+//main().catch(console.error);
 getAllCommands();
 exports.modName = "Custom Commands";
 
