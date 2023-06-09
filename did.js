@@ -22,7 +22,7 @@ async function main(){
     } catch (e) {
         console.error(e);
     } finally {
-        await client.close();
+      //  await client.close();
     }
 }
 
