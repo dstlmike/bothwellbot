@@ -1,5 +1,5 @@
 //consider factory model / dependecy injection
-var commands;
+var commands = [];
 var userCommands = [addCmd, describeCmd, editCmd, removeCmd];
 
 var db = require('../modules/db.js');
@@ -127,7 +127,7 @@ function addCmd(request, bots, isMod, callback) {
       message: val[2],
     };
 
-    commands[cmdHash].push(cmdHash);
+    commands.push(cmdHash);
     addCmdToDB(cmdHash);
     var msg = val[1] + " command added! please use \"/cmd describe " + val[1] + " <description>\" to add a description for your new command";
     callback(true, msg, []);
