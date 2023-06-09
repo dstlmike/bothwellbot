@@ -29,7 +29,7 @@ function getAllDocuments(collection, callback) {
   });
 }
 
-exports.getAllDocuments = getAllDocuments();
+exports.getAllDocuments = getAllDocuments;
 
 exports.addDoc = function(collection, doc, callback) {
   connect(function(db){
