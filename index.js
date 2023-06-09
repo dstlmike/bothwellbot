@@ -33,7 +33,7 @@ server = http.createServer(function (req, res) {
 port = process.env.PORT || "27017" || "8080" || "3002";
 ip = "0.0.0.0" || "127.0.0.1"; //process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
-server.listen(port, ip);
+server.listen(port); //, ip);
 
 function ping() {
 //  console.log(this.res);
