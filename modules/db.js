@@ -66,7 +66,7 @@ async function listDatabases(collection, client, callback){
 
  var ret = [];
 
-    var allDocs = await client.db(collection).find().toArray(function(err, docs) {
+    var allDocs = await client.db('bothwellbot').find().toArray(function(err, docs) {
 
       callback(docs);
 
