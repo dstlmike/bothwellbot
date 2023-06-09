@@ -2,7 +2,7 @@
   "name": "Bothwell-Bot",
   "version": "1.0.0",
   "description": "A Bot made for Bothwell-Accurate",
-  "main": "index.js",
+  "main": "did.js",
   "scripts": {
     "start": "node did.js"
   },
