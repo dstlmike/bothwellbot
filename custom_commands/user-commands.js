@@ -1,5 +1,5 @@
 //consider factory model / dependecy injection
-var commands;
+var commands = [];
 var userCommands = [addCmd, describeCmd, editCmd, removeCmd];
 
 var db = require('../modules/db.js');
