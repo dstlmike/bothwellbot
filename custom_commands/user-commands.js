@@ -106,13 +106,13 @@ function addCmd(request, bots, callback) { //isMod, callback) {
 
   if (regex.test(reqText)){
     var val = regex.exec(reqText);
-
+/*
     if (!isMod) {
       var msg = "You don't have permission to add commands"
       callback(true, msg, []);
       return msg;
     }
-
+*/
     for (cmd in commands) {
       if (commands[cmd].name == val[1]) {
         var msg = val[1] + " already exists";
