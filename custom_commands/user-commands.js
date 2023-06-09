@@ -100,7 +100,7 @@ exports.getCmdListDescription = function () {
 }
 
 
-function addCmd(request, bots, isMod, callback) {
+function addCmd(request, bots, callback) { //isMod, callback) {
   var regex = /^\/cmd add (.+?) ([\s\S]+)/i;
   var reqText = request.text;
 
