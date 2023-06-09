@@ -104,7 +104,7 @@ function addCmd(request, bots, isMod, callback) {
   var regex = /^\/cmd add (.+?) ([\s\S]+)/i;
   var reqText = request.text;
 
- // if (regex.test(reqText)){
+ if (regex.test(reqText)){
     var val = regex.exec(reqText);
 /*
     if (!isMod) {
@@ -132,7 +132,7 @@ function addCmd(request, bots, isMod, callback) {
     var msg = val[1] + " command added! please use \"/cmd describe " + val[1] + " <description>\" to add a description for your new command";
     callback(true, msg, []);
     return msg;
- // }
+ }
 }
 
 function describeCmd(request, bots, isMod, callback) {
