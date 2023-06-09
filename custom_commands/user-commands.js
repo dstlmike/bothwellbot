@@ -1,11 +1,12 @@
 //consider factory model / dependecy injection
 var commands = [];
 var userCommands = [addCmd, describeCmd, editCmd, removeCmd];
-
+var main =require('../modules/db.js');
 var db = require('../modules/db.js');
 var db_table = 'user_triggers';
 
 //init - make an init function
+main().catch(console.error);
 getAllCommands();
 exports.modName = "Custom Commands";
 
