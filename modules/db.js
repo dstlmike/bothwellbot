@@ -64,15 +64,7 @@ async function listDatabases(collection, client, callback){
 
     databasesList = await client.db().admin().listDatabases();
 
- var ret = [];
-
-    var allDocs = await db.client('bothwellbot').find().toArray(function(err, docs) {
-
-      callback(docs);
-
-      //db.close();
-
-    });
+ 
 
     console.log("Databases:");
 
