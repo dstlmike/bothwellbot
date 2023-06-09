@@ -10,6 +10,17 @@ main().catch(console.error);
 getAllCommands();
 exports.modName = "Custom Commands";
 
+async function listDatabases(client){
+
+    databasesList = await client.db().admin().listDatabases();
+
+ 
+
+    console.log("Databases:");
+
+    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+
+};
 //Database managing commands ... not sure if this is the right place for these
 function getAllCommands() {
   db.getAllDocuments(db_table, function(res){
