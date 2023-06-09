@@ -1,1 +1,1 @@
-web: node did.js
+web: node index.js
