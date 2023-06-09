@@ -4,7 +4,7 @@
   "description": "A Bot made for Bothwell-Accurate",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node did.js"
   },
   "dependencies": {
     "director": "",
