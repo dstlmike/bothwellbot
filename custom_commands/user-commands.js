@@ -104,15 +104,15 @@ function addCmd(request, bots, isMod, callback) {
   var regex = /^\/cmd add (.+?) ([\s\S]+)/i;
   var reqText = request.text;
 
-  if (regex.test(reqText)){
+ // if (regex.test(reqText)){
     var val = regex.exec(reqText);
-
+/*
     if (!isMod) {
       var msg = "You don't have permission to add commands"
       callback(true, msg, []);
       return msg;
     }
-
+*/
     for (cmd in commands) {
       if (commands[cmd].name == val[1]) {
         var msg = val[1] + " already exists";
@@ -132,7 +132,7 @@ function addCmd(request, bots, isMod, callback) {
     var msg = val[1] + " command added! please use \"/cmd describe " + val[1] + " <description>\" to add a description for your new command";
     callback(true, msg, []);
     return msg;
-  }
+ // }
 }
 
 function describeCmd(request, bots, isMod, callback) {
