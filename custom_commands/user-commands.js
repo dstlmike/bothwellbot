@@ -12,7 +12,7 @@ exports.modName = "Custom Commands";
 
 const {MongoClient} = require('mongodb');
 
-main().catch(console.error);
+//main().catch(console.error);
 
 async function main(){
 
