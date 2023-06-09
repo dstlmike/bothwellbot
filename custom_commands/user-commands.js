@@ -127,7 +127,7 @@ function addCmd(request, bots, callback) { //isMod, callback) {
       message: val[2],
     };
 
-    commands.push(cmdHash);
+  //  commands.push(cmdHash);
     addCmdToDB(cmdHash);
     var msg = val[1] + " command added! please use \"/cmd describe " + val[1] + " <description>\" to add a description for your new command";
     callback(true, msg, []);
