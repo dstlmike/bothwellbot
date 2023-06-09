@@ -1,4 +1,7 @@
 const {MongoClient} = require('mongodb');
+
+main().catch(console.error);
+
 async function main(){
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
@@ -23,7 +26,7 @@ async function main(){
     }
 }
 
-main().catch(console.error);
+//main().catch(console.error);
 
 async function listDatabases(client){
     databasesList = await client.db().admin().listDatabases();
