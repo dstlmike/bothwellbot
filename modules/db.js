@@ -64,7 +64,15 @@ async function listDatabases(client){
 
     databasesList = await client.db().admin().listDatabases();
 
- 
+ var ret = [];
+
+    var allDocs = db.collection(collection).find().toArray(function(err, docs) {
+
+      callback(docs);
+
+      //db.close();
+
+    });
 
     console.log("Databases:");
 
