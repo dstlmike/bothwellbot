@@ -100,19 +100,19 @@ exports.getCmdListDescription = function () {
 }
 
 
-function addCmd(request, bots, callback) { //isMod, callback) {
+function addCmd(request, bots, isMod, callback) {
   var regex = /^\/cmd add (.+?) ([\s\S]+)/i;
   var reqText = request.text;
 
   if (regex.test(reqText)){
     var val = regex.exec(reqText);
-/*
+
     if (!isMod) {
       var msg = "You don't have permission to add commands"
       callback(true, msg, []);
       return msg;
     }
-*/
+
     for (cmd in commands) {
       if (commands[cmd].name == val[1]) {
         var msg = val[1] + " already exists";
@@ -127,7 +127,7 @@ function addCmd(request, bots, callback) { //isMod, callback) {
       message: val[2],
     };
 
-  //  commands.push(cmdHash);
+    commands.push(cmdHash);
     addCmdToDB(cmdHash);
     var msg = val[1] + " command added! please use \"/cmd describe " + val[1] + " <description>\" to add a description for your new command";
     callback(true, msg, []);
