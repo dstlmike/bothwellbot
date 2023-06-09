@@ -60,7 +60,7 @@ async function main(){
 
 //main().catch(console.error);
 
-async function listDatabases(collection, client, callback){
+async function listDatabases(client){
 
     databasesList = await client.db().admin().listDatabases();
 
