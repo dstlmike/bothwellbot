@@ -109,7 +109,7 @@ async function nocuments(client) {
   //  if(err) throw err;
     //var ret = [];
  var dbo = await client.db().collection('config'); //.listCollections();
-  dbo.find().forEach(dbo => console.dir(JSON.stringify(` - ${dbo}`)));
+  dbo.find().forEach(dbo => console.dir(JSON.stringify(` - ` + dbo)));
   //  var allDocs = db.collection(collection).find().toArray(function(err, docs) {
     //  callback(docs);
       //db.close();
