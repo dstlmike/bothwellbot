@@ -115,7 +115,7 @@ async function getAllDocuments(client) {
       //db.close();
   //  });
  // });
-}
+};
 
 exports.getAllDocuments = function(collection, docs, callback) {
 
