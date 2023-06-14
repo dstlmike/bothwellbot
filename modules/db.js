@@ -75,7 +75,7 @@ async function listDatabases(client){
 async function listCollections(client){
 
 
-     const dbo = client.db('sampledb').listCollections();
+     const dbo = await client.db('sampledb').listCollections();
 
      dbo.toArray(function(err, items) {
         console.log(items)
