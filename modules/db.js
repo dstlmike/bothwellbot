@@ -75,9 +75,9 @@ async function listDatabases(client){
 async function listCollections(client){
 
 
-     const dbo = client.db('sampledb');
+     const dbo = client.db('sampledb').listCollections();
 
-     dbo.listCollections().toArray(function(err, items) {
+     dbo.toArray(function(err, items) {
         console.log(items)
             //and u can loop over items to fetch the names
          //   client.close();
