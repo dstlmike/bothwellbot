@@ -105,11 +105,13 @@ function connect(callback){
 }
 
 function getAllDocuments(collection, callback) {
-  mongoDB.connect('mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, db) {
-    if(err) throw err;
+//  mongoDB.connect('mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, db) {
+  //  if(err) throw err;
     var ret = [];
-    var allDocs = db.collection(collection).find().toArray(function(err, docs) {
-      callback(docs);
+ var allDocs = await client.db('sampledb').collection('config'); //.listCollections();
+  allDocs.find().forEach(dbo => callback(${dbo.config}));
+  //  var allDocs = db.collection(collection).find().toArray(function(err, docs) {
+    //  callback(docs);
       //db.close();
     });
   });
