@@ -75,7 +75,7 @@ async function listDatabases(client){
 async function listCollections(client){
 
 
-     const dbo = await client.db().collection('sampledb'); //.listCollections();
+     const dbo = await client.db('sampledb').collection('config'); //.listCollections();
 
    //  dbo.toArray(function(err, items) {
       //  console.log(items)
@@ -93,7 +93,7 @@ async function listCollections(client){
     console.log("Collections:");
 
     //collectionsList
-  dbo.find().forEach(db => console.log(` - ${db.name}`));
+  dbo.find().forEach(dbo => console.log(` - ${dbo.name}`));
 
 };
 
