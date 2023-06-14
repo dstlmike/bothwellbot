@@ -109,12 +109,12 @@ async function nocuments(client) {
   //  if(err) throw err;
     //var ret = [];
   var list = {
-    name: dbo.name,
-    id: dbo.id,
-    config: dbo.config
+    "name": dbo.name,
+    "id": dbo.id,
+    "config": dbo.config
     }
  var dbo = await client.db('sampledb').collection('rooms'); //.listCollections();
-  dbo.find().forEach(dbo => console.log(JSON.stringify(` - ${list}`)));
+  dbo.find().forEach(dbo => console.log(JSON.stringify(` - $list`)));
   //  var allDocs = db.collection(collection).find().toArray(function(err, docs) {
     //  callback(docs);
       //db.close();
