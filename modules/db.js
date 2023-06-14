@@ -74,15 +74,25 @@ async function listDatabases(client){
 
 async function listCollections(client){
 
-    collectionsList = await client.db().admin().listCollections();
+
+     const dbo = client.db('sampledb');
+
+     dbo.listCollections().toArray(function(err, items) {
+        console.log(items)
+            //and u can loop over items to fetch the names
+            client.close();
+
+
+    });
+  //  collectionsList = await client.db().admin().listCollections();
 
 //databasesList = await client.db().admin().('listDatabases');
 
  
 
-    console.log("collections:");
+    //console.log("collections:");
 
-    collectionsList.forEach(db => console.log(` - ${db.name}`));
+    //collectionsList.forEach(db => console.log(` - ${db.name}`));
 
 };
 
