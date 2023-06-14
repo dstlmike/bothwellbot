@@ -80,7 +80,7 @@ async function listCollections(client){
      dbo.listCollections().toArray(function(err, items) {
         console.log(items)
             //and u can loop over items to fetch the names
-            client.close();
+         //   client.close();
 
 
     });
