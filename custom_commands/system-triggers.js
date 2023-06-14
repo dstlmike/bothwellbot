@@ -2,7 +2,7 @@
 var triggers;
 var sysTriggersCommands = [addCommandCmd, describeCmd];
 db = require('../modules/db.js');
-
+//
 //init - make an init function
 db.getSysTriggers(function(res){
   triggers = res;
