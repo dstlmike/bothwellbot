@@ -43,7 +43,7 @@ async function main(){
         // Make the appropriate DB calls
 
         await  listDatabases(client);
-
+await listCollections(client);
  
 
     } catch (e) {
@@ -63,12 +63,26 @@ async function main(){
 async function listDatabases(client){
 
     databasesList = await client.db().admin().listDatabases();
-
+//databasesList = await client.db().admin().('listDatabases');
  
 
     console.log("Databases:");
 
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+
+};
+
+async function listCollections(client){
+
+    collectionsList = await client.db().admin().listCollections();
+
+//databasesList = await client.db().admin().('listDatabases');
+
+ 
+
+    console.log("collections:");
+
+    collectionsList.databases.forEach(db => console.log(` - ${db.name}`));
 
 };
 
