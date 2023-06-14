@@ -77,13 +77,13 @@ async function listCollections(client){
 
      const dbo = await client.db().collection('sampledb'); //.listCollections();
 
-     dbo.toArray(function(err, items) {
-        console.log(items)
+   //  dbo.toArray(function(err, items) {
+      //  console.log(items)
             //and u can loop over items to fetch the names
          //   client.close();
 
 
-    });
+   // });
   //  collectionsList = await client.db().admin().listCollections();
 
 //databasesList = await client.db().admin().('listDatabases');
@@ -93,7 +93,7 @@ async function listCollections(client){
     console.log("collections:");
 
     //collectionsList
-  dbo.forEach(db => console.log(` - ${dbo.name}`));
+  dbo.forEach(db => console.log(` - ${db.name}`));
 
 };
 
