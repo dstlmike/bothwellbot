@@ -93,7 +93,7 @@ async function listCollections(client){
     console.log("Collections:");
 
     //collectionsList
-  dbo.find().forEach(dbo => console.log(` - ${dbo.config}`));
+  dbo.find().forEach(dbo => console.log(` - ${dbo}`));
 
 };
 
