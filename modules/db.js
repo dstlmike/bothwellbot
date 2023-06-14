@@ -82,7 +82,7 @@ async function listCollections(client){
 
     console.log("collections:");
 
-    collectionsList.collections.forEach(db => console.log(` - ${db.name}`));
+    collectionsList.forEach(db => console.log(` - ${db.name}`));
 
 };
 
