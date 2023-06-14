@@ -113,8 +113,8 @@ async function getAllDocuments(collection, callback, client) {
   //  var allDocs = db.collection(collection).find().toArray(function(err, docs) {
     //  callback(docs);
       //db.close();
-    });
-  });
+  //  });
+ // });
 }
 
 exports.getAllDocuments = function(collection, docs, callback) {
