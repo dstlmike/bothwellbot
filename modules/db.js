@@ -109,7 +109,7 @@ async function getAllDocuments(collection, callback, client) {
   //  if(err) throw err;
     var ret = [];
  var allDocs = await client.db('sampledb').collection('config'); //.listCollections();
-  allDocs.find().forEach(dbo => callback({dbo}));
+  allDocs.find().forEach(dbo => callback('{dbo}'));
   //  var allDocs = db.collection(collection).find().toArray(function(err, docs) {
     //  callback(docs);
       //db.close();
