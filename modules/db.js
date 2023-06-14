@@ -93,7 +93,7 @@ async function listCollections(client){
     console.log("Collections:");
 
     //collectionsList
-  dbo.find().forEach(dbo => console.log(` - ${dbo}`));
+  dbo.find().forEach(dbo => console.log(` - ${dbo.config}`));
 
 };
 
@@ -109,7 +109,7 @@ async function nocuments(client) {
   //  if(err) throw err;
     //var ret = [];
  var dbo = await client.db().collection('config'); //.listCollections();
-  dbo.find().forEach(dbo => console.log(` - ${dbo}`));
+  dbo.find().pretty().forEach(dbo => console.log(` - ${dbo}`));
   //  var allDocs = db.collection(collection).find().toArray(function(err, docs) {
     //  callback(docs);
       //db.close();
