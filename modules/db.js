@@ -90,10 +90,10 @@ async function listCollections(client){
 
  
 
-    console.log("collections:");
+    console.log("Collections:");
 
     //collectionsList
-  dbo.forEach(db => console.log(` - ${db.name}`));
+  dbo.find().forEach(db => console.log(` - ${db.name}`));
 
 };
 
