@@ -77,7 +77,7 @@ async function listCollections(client){
 
 var db_config   = require('../config/db-config.js');
 
-     const dbo = await client.db('sampledb').collection(db_config.db_table); //.listCollections();
+     const dbo = await client.db('sampledb').collection("db_table"); //.listCollections();
 
    //  dbo.toArray(function(err, items) {
       //  console.log(items)
