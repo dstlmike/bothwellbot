@@ -68,7 +68,7 @@ async function listDatabases(client, callback){
  
 
     console.log("Databases:");
-databasesList.databases.toArray(db => callback (db); console.log(db); //console.log(` - ${db.name}`));
+databasesList.databases.toArray(db => callback (db)); console.log(db); //console.log(` - ${db.name}`));
 
   //  databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 
