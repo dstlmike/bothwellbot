@@ -123,7 +123,7 @@ async function nocuments(client) {
                                             console.log(results);
     db.close();
 //});
-  });
+  };
   //  dbo.find().forEach(dbo => (console.log(` Name: ${dbo.name}` + `\n` + ` Id: ${dbo.id}`));
   //  var allDocs = db.collection(collection).find().toArray(function(err, docs) {
     //  callback(docs);
