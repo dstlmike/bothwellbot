@@ -10,6 +10,7 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   process.env.OPENSHIFT_APP_NAME;
 }
 //
+getAllDocuments();
 connect();
 const {MongoClient} = require('mongodb');
 
@@ -139,6 +140,7 @@ function getAllDocuments(collection, callback) {
     if(err) throw err;
     var allDocs = db.collection(collection).find().toArray(function(err, docs) {
       callback(docs);
+      console.log(docs);
       db.close();
     });
   });
