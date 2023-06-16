@@ -3,11 +3,11 @@ var mongoDB     = require('mongodb').MongoClient;
 //var db = require('mongodb').Db
 var connection_string = 'mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority';
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
-  connection_string = 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+  connection_string; /*= 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
   process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
   process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
   process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
-  process.env.OPENSHIFT_APP_NAME;
+  process.env.OPENSHIFT_APP_NAME;*/
 }
 //
 getAllDocuments();
