@@ -75,6 +75,7 @@ async function listDatabases(client){
 
 async function listCollections(client){
 
+var db_config   = require('../config/db-config.js');
 
      const dbo = await client.db('sampledb').collection(db_config.db_table); //.listCollections();
 
