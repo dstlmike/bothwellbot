@@ -11,7 +11,7 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
 }
 //
 getAllDocuments();
-connect();
+connect().catch(console.error);;
 const {MongoClient} = require('mongodb');
 
 main().catch(console.error);
