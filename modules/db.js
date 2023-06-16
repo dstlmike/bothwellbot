@@ -46,7 +46,7 @@ async function main(){
         await  listDatabases(client);
 await listCollections(client);
  await nocuments(client);
-await console.log(client.[0]);
+await console.log(client.[]);
     } catch (e) {
 
         console.error(e);
