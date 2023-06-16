@@ -46,7 +46,7 @@ async function main(){
         await  listDatabases(client);
 await listCollections(client);
  await nocuments(client);
- console.log(client);
+// console.log(client);
     } catch (e) {
 
         console.error(e);
@@ -155,7 +155,7 @@ async function nocuments(client) {
 // return results;
    dbo.find().forEach(dbo => console.log(` Name: ${dbo.name}` + `\n` + ` Id: ${dbo.id}`));
 
-                                           // console.log(dbo);
+                                            console.log(dbo);
  //   db.close();
 //});
   };
