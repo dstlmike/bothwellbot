@@ -114,7 +114,7 @@ async function nocuments(client) {
     "config": dbo.config
     }*/
  var dbo = await client.db('sampledb').collection('rooms'); //.listCollections();
-dbo.find({"name": 1}, function(err, cursor)){
+dbo.find({"name": 1}, function(err, cursor){
 
     cursor.toArray(callback);
   console.log(cursor);
