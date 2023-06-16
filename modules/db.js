@@ -119,7 +119,7 @@ async function connect(callback){
         await client.connect();
 
 //await callback(db);
-await console.log(db);
+//await console.log(db);
         // Make the appropriate DB calls
 
        // await  listDatabases(client);
