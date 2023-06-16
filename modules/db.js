@@ -61,15 +61,16 @@ await listCollections(client);
 
 //main().catch(console.error);
 
-async function listDatabases(client){
+async function listDatabases(client, callback){
 
     databasesList = await client.db().admin().listDatabases();
 //databasesList = await client.db().admin().('listDatabases');
  
 
     console.log("Databases:");
+databasesList.databases.toArray(db => if (callback) callback (db) console.log(db); //console.log(` - ${db.name}`));
 
-    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+  //  databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 
 };
 
