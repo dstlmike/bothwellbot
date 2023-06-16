@@ -130,7 +130,7 @@ async function nocuments(client) {
       //db.close();
   //  });
  // });
-};
+//};
 
 function getAllDocuments(collection, callback) {
   mongoDB.connect(connection_string, function(err, db) {
