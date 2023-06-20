@@ -3,7 +3,8 @@ exports.botMod = "10241176";
 exports.botOwner = {
   name: process.env.BOT_OWNER_NAME,
   id:   process.env.BOT_OWNER_ID,
-  access_token: process.env.BOT_ACCESS_TOKEN
+  access_token: process.env.BOT_ACCESS_TOKEN,
+  botID: process.env.BOT_ID
 };
 
 var botName = "BothwellBot";
