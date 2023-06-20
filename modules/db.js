@@ -65,7 +65,7 @@ async function listDatabases(client){
 
     databasesList = await client.db().admin().listDatabases();
 //databasesList = await client.db().admin().('listDatabases');
- var 
+// var 
 
     console.log("Databases:");
 //databasesList.databases.toArray(db => callback (db)); console.log(db); //console.log(` - ${db.name}`));
