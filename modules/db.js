@@ -79,7 +79,7 @@ async function listCollections(client, db_table){
 var db_table = {};
 var db_config   = require('../config/db-config.js');
 
-     const dbo = await client.db('sampledb').collection(db_table); //.listCollections();
+     const dbo = await client.db('sampledb').collection('mods'); //.listCollections();
 
    //  dbo.toArray(function(err, items) {
       //  console.log(items)
@@ -97,7 +97,7 @@ var db_config   = require('../config/db-config.js');
     console.log("Collections:");
 
     //collectionsList
-  dbo.find().forEach(dbo => console.log(` - ${dbo.config}`));
+  dbo.find().forEach(dbo => console.log(` - ${dbo.name}`));
 
 };
 
