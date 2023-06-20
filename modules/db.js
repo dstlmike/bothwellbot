@@ -61,16 +61,16 @@ await listCollections(client);
 
 //main().catch(console.error);
 
-async function listDatabases(client, callback){
+async function listDatabases(client){
 
     databasesList = await client.db().admin().listDatabases();
 //databasesList = await client.db().admin().('listDatabases');
- 
+ var 
 
     console.log("Databases:");
-databasesList.databases.toArray(db => callback (db)); console.log(db); //console.log(` - ${db.name}`));
+//databasesList.databases.toArray(db => callback (db)); console.log(db); //console.log(` - ${db.name}`));
 
-  //  databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 
 };
 
@@ -172,8 +172,8 @@ async function nocuments(client) {
 function getAllDocuments(collection, callback) {
   mongoDB.connect(connection_string, function(err, db) {
     if(err) throw err;
-    var allDocs = db.collection(collection).find().toArray(function(err, docs) {
-      callback(docs);
+    var allDocs = db.collection(collection).find().toArray(function(err, result) {
+      callback(result);
       console.log(allDocs);
       db.close();
     });
