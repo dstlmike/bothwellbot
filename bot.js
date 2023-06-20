@@ -68,7 +68,7 @@ exports.commands = function() {
 
   if (bots[path]) {
     bot.type = path;
-    bot.id = process.env.BOT_OWNER_ID;
+    bot.id = process.env.BOT_ID;
   }
 
   return bot;
@@ -81,7 +81,7 @@ exports.commands = function() {
 
   if (config.bots[path]) {
     bot.type = path;
-    bot.id = config.bots[path];
+    bot.id = process.env.BOT_ID; // config.bots[path];
   }
 
   return bot;
