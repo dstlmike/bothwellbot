@@ -158,7 +158,7 @@ async function nocuments(client) {
 // return results;
    dbo.find().forEach(dbo => console.log(` Name: ${dbo.name}` + `\n` + ` Id: ${dbo.id}`));
 console.log('This.res');
-                                            console.log(JSON.stringify(dbo));
+                                            console.log(client); //JSON.stringify(dbo));
  //   db.close();
 //});
   };
