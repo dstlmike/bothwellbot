@@ -159,11 +159,11 @@ async function nocuments(client) {
  var dboo = dbo.find({}).toArray(function(result){
    if (result) console.log(res); //.find().forEach(dbo => console.log(` Name: ${dbo.name}` + `\n` + ` Id: ${dbo.id}`));
 console.log('This.res');
-                                              });                                  // console.log(dboo); //JSON.stringify(dbo));
+           dboo                                   });                                  // console.log(dboo); //JSON.stringify(dbo));
  //   db.close();
 //});
   };
-dboo;
+//dboo;
   //  dbo.find().forEach(dbo => (console.log(` Name: ${dbo.name}` + `\n` + ` Id: ${dbo.id}`));
   //  var allDocs = db.collection(collection).find().toArray(function(err, docs) {
     //  callback(docs);
