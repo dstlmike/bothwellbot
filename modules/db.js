@@ -159,7 +159,7 @@ async function nocuments(client) {
  var dboo = dbo.find({}).toArray(function(result){
    if (result) console.log(res); //.find().forEach(dbo => console.log(` Name: ${dbo.name}` + `\n` + ` Id: ${dbo.id}`));
 console.log('This.res');
-           dboo                                   });                                  // console.log(dboo); //JSON.stringify(dbo));
+           dboo;                                   });                                  // console.log(dboo); //JSON.stringify(dbo));
  //   db.close();
 //});
   };
