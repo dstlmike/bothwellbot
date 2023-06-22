@@ -14,7 +14,7 @@ exports.bots = {
   BothwellBot: process.env.BOT_ID
   };
   
-/*
+
 if (botName == 'BothwellBot') {
   exports.bot_name = 'BothwellBot';
   exports.bots = {
