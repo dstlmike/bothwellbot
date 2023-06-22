@@ -10,7 +10,7 @@ var connection_string = 'mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha
   process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
   process.env.OPENSHIFT_APP_NAME;*/
 //}
-//getAllDocuments();
+getAllDocuments();
 //connect(client); //.catch(console.error);
 const {MongoClient} = require('mongodb');
 
