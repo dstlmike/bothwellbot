@@ -156,9 +156,9 @@ async function nocuments(client) {
 
   //  dbo.find().toArray(function(err, results) {;
 // return results;
- var dboo = dbo.find({}).toArray(function(result){
-   if (result) console.log(result); //.find().forEach(dbo => console.log(` Name: ${dbo.name}` + `\n` + ` Id: ${dbo.id}`));
-console.log('This.res');
+ var dboo = dbo.find().toArray(function(err, cursor){
+   //if (result) console.log(result); //.find().forEach(dbo => console.log(` Name: ${dbo.name}` + `\n` + ` Id: ${dbo.id}`));
+console.log(cursor);
            dboo;                                   });                                  // console.log(dboo); //JSON.stringify(dbo));
  //   db.close();
 //});
