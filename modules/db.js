@@ -102,28 +102,29 @@ var db_config   = require('../config/db-config.js');
 
 };
 
-async function connect(callback){
- // mongoDB.connect('mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, db) {
-   // if(err) throw err;
+function connect(collection, callback){
+ mongoDB.connect('mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, results) {
+    if(err) throw err;
+   callback(results);
    // callback(db);
-   // console.log('Test: ' + '\n' + db);
+    console.log('Test: ' + '\n' + results);
  // });
-  const uri = 'mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority';
+//  const uri = 'mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority';
 
  //
 
-    const client = new MongoClient(uri);
+   // const client = new MongoClient(uri);
 
  
 
-    try {
+   // try {
 
         // Connect to the MongoDB cluster
 
-        await client.connect();
+      //  await client.connect();
 
 //await callback(db);
-await console.log(callback);
+//await console.log(db);
         // Make the appropriate DB calls
 
        // await  listDatabases(client);
@@ -132,11 +133,11 @@ await console.log(callback);
 
 // await nocuments(client);
 
-    } catch (e) {
+   // } catch (e) {
 
-        console.error(e);
+     //   console.error(e);
 
-    } finally {
+   // } finally {
 
       //  await client.close();
 
