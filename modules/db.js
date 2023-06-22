@@ -175,9 +175,9 @@ console.log('This.res');
 function getAllDocuments(collection, callback) {
   mongoDB.connect(connection_string, function(err, db) {
     if(err) throw err;
-    var allDocs = db.collection(collection).find().toArray(function(err, result) {
-      callback(result);
-      console.log(allDocs);
+    var allDocs = db.collection(collection).find().toArray(function(err, cursor) {
+      callback(cursor);
+      console.log(cursor);
       db.close();
     });
   });
