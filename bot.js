@@ -62,8 +62,8 @@ exports.commands = function() {
   this.res.end(output);
 }
 
-//exports.getBot = function getBot(path);
-/*
+exports.getBot = function getBot(path);
+
   var bot = {};
   path = path.toLowerCase();
 
@@ -74,7 +74,7 @@ exports.commands = function() {
 
   return bot;
 }
-*/
+
 
  function getBot(path) {
   var bot = {};
