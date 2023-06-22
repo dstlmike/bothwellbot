@@ -62,7 +62,7 @@ exports.commands = function() {
   this.res.end(output);
 }
 
-exports.getBot = function getBot(path);
+exports.getBot = function getBot(path) {
 
   var bot = {};
   path = path.toLowerCase();
@@ -75,7 +75,7 @@ exports.getBot = function getBot(path);
   return bot;
 }
 
-
+/*
  function getBot(path) {
   var bot = {};
   path = path.toLowerCase();
@@ -87,7 +87,7 @@ exports.getBot = function getBot(path);
 
   return bot;
 }
-
+*/
 function sendDelayedMessage(msg, attachments, botID) {
   setTimeout(function() {
     postMessage(msg, attachments, botID);
