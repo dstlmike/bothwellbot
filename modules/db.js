@@ -65,7 +65,7 @@ await listCollections(client);
 
 async function listDatabases(client){
 
-    databasesList = await client.db().sampledb().listDatabases();
+    databasesList = await client.db().admin().listDatabases();
 //databasesList = await client.db().admin().('listDatabases');
 // var 
 
@@ -80,7 +80,7 @@ async function listCollections(client, db_table){
 var db_table = {};
 var db_config   = require('../config/db-config.js');
 
-     const dbo = await client.db('sampledb').collection('mods'); //.listCollections();
+     const dbo = await client.db('sampledb').collection('rooms'); //.listCollections();
 
    //  dbo.toArray(function(err, items) {
       //  console.log(items)
