@@ -65,7 +65,7 @@ await listCollections(client);
 
 async function listDatabases(client){
 
-    databasesList = await client.db().admin().listDatabases();
+    databasesList = await client.db().sampledb().listDatabases();
 //databasesList = await client.db().admin().('listDatabases');
 // var 
 
